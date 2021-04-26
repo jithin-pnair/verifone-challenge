@@ -1,0 +1,21 @@
+<div class="container" fxLayout="column">
+  <div class="card container" fxLayout="row" fxFlex>
+    <div fxFlex="60" class="marginRigth">
+      <img class="imgsize" [src]="getFirstURL(collectionsList)" alt="" />
+    </div>
+    <div fxFlex="40" fxLayout="column">
+      <div fxFlex="50" class="marginButton">
+        <img class="imgsize" [src]="getSecondURL(collectionsList)" alt="" />
+      </div>
+      <div fxFlex="50">
+        <img class="imgsize" [src]="getThirdURL(collectionsList)" alt="" />
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="space-around">
+    <h3 fxFlex="70">{{ collectionName }}</h3>
+    <p fxLayoutAlign="end center">
+      {{ totalPhotoLabel }}{{ collectionLength }}
+    </p>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="main">
+  <div class="close">
+    <mat-icon matTooltip="Close" (click)="closeDialog(data)">
+      {{ addToFavouriteFormUiConfig.close }}
+    </mat-icon>
+  </div>
+
+  <div class="clearfix">
+    <img class="fav-img" [src]="data.urls.small" alt="" />
+  </div>
+  <div class="clearfix2">
+    <div class="collectionMainHead">
+      <h1>{{ createCollectionLabel }}</h1>
+    </div>
+    <div *ngIf="createCollection">
+      <div>
+        <button class="borderdot" (click)="CreateCollection()">
+          {{ addToFavouriteFormUiConfig.buttonText }}
+        </button>
+      </div>
+
+      <div>
+        <div class="collectionList" *ngFor="let item of collectionList">
+          <div class="border" [ngClass]="{ greenBackColor: addImageToCollection(item) }" fxLayout="row"
+            (click)="addOrRemovePhoto(item)">
+            <div fxFlex="90">
+              <h2 s class="tollectionsTitle">{{ item.name }}</h2>
+            </div>
+            <div *ngIf="!addImageToCollection(item)" fxLayoutAlign="end center">
+              <mat-icon>{{ addToFavouriteFormUiConfig.add }}</mat-icon>
+            </div>
+            <div *ngIf="addImageToCollection(item)" fxLayoutAlign="end center">
+              <mat-icon>{{ addToFavouriteFormUiConfig.remove }}</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!createCollection" fxLayout="column" fxLayoutGap="20px">
+      <form [formGroup]="createCollecttonForm">
+        <mat-form-field appearance="outline" fxFill class="toMargin">
+          <mat-label>{{ addToFavouriteFormUiConfig.collectionName }}</mat-label>
+          <input id="collectionNameInput" matInput placeholder="Name" formControlName="name" maxlength="60" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFill>
+          <mat-label>{{ addToFavouriteFormUiConfig.description }}</mat-label>
+          <textarea matInput placeholder="Description (optional)" formControlName="desc" maxlength="250"></textarea>
+        </mat-form-field>
+        <div fxLayout="row" fxFill fxLayoutGap="200px">
+          <button mat-button (click)="cancelCreate()">
+            {{ addToFavouriteFormUiConfig.cancel }}
+          </button>
+          <button mat-raised-button color="primary" [disabled]="createCollecttonForm.invalid" id="createCollectionBtn"
+            fxLayoutAlign="end end" (click)="collectionCreate()">
+            {{ addToFavouriteFormUiConfig.createcollection }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

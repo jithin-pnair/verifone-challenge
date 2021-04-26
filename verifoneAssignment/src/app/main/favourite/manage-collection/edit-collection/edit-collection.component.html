@@ -1,0 +1,33 @@
+<div class="editCollection">
+  <div class="close" fxLayoutAlign="end center">
+    <mat-icon matTooltip="Close" (click)="closeDialog()">
+      {{ initResourcesValue.closeMatIcon }}
+    </mat-icon>
+  </div>
+  <div fxLayout="column" fxLayoutGap="20px">
+    <h2>{{ initResourcesValue.editHeading }}</h2>
+    <form [formGroup]="createCollecttonForm">
+      <mat-form-field appearance="outline" fxFill class="toMargin">
+        <mat-label>{{ initResourcesValue.nameLabel }}</mat-label>
+        <input matInput placeholder="Name" formControlName="name" required
+          [maxlength]="initResourcesValue.inputLength" />
+        <mat-error>Collection Name is Required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" fxFill>
+        <mat-label>{{ initResourcesValue.descriptionLabel }}</mat-label>
+        <textarea matInput placeholder="Description (optional)" formControlName="desc"
+          [maxlength]="initResourcesValue.textareaLength"></textarea>
+      </mat-form-field>
+      <div fxLayout="row" fxFill fxLayoutGap="250px">
+        <button mat-button (click)="deleteCollection()">
+          {{ initResourcesValue.deleteButton }}
+        </button>
+        <button type="submit" [disabled]="!createCollecttonForm.valid" mat-raised-button color="primary"
+          fxLayoutAlign="end end" (click)="updateName()">
+          {{ initResourcesValue.updateNameButton }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	padding-left: 0% !important;
+}
+
+ul#horizontal-list li {
+	display: inline;
+}
+
+li {
+	padding: 2%;
+}
+
+li.a {
+	cursor: pointer;
+}
+
+.horizantalLineDownToNav {
+	margin-left: 2%;
+	margin-right: 2%;
+}

@@ -1,0 +1,9 @@
+.container {
+    padding: 2%;
+    text-align: center;
+}
+
+.ConfirmBtn {
+    text-align: center;
+    float: right;
+}

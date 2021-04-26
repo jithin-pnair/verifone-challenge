@@ -1,0 +1,28 @@
+<app-nav (emitSearchKey)="searchImages($event)"></app-nav>
+
+<div class="container">
+  <div fxLayout="row">
+    <div class="collection_header" fxFlex="50">
+      <h2>
+        {{ collectionDetails.name }}
+      </h2>
+      <p>
+        {{ collectionDetails.desc }}
+      </p>
+    </div>
+    <div class="collection_body" fxfxFlex="50" fxFlex>
+      <div class="btn_container clearfix">
+        <button class="edit_btn" (click)="editCollection()">
+          <img src="assets/icons/noun_edit_3451588.svg" alt="Pic" />
+          {{ initResourceValue.imageName }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="images_container" *ngFor="let img of imgArr; let i = index">
+    <a [href]="getImageUrl(img)">
+      <img class="imgAlignment" src="{{ img.urls.small }}" alt=""/>
+    </a>
+  </div>
+</div>

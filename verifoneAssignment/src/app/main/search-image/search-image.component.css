@@ -1,0 +1,12 @@
+p {
+  text-align: center;
+}
+
+mat-paginator {
+  margin-right: 2%;
+  margin-top: 1%;
+}
+
+.toShowimageComponent {
+  margin-left: 1%;
+}

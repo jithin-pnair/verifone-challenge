@@ -1,0 +1,58 @@
+.container {
+  position: relative;
+  float: left;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  font-size: 20px;
+  margin-bottom: 2%;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-left: 1%;
+}
+
+mat-icon {
+  margin-left: 40%;
+  margin-top: 6%;
+  cursor: pointer;
+}
+
+p {
+  cursor: pointer;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 23%;
+  height: 300px;
+  margin: 1%;
+}
+
+.favourite-icon {
+  position: absolute;
+  right: 1;
+  bottom: 2;
+  margin-left: 37%;
+  margin-top: 5%;
+  width: 28px !important;
+  height: 28px !important;
+  cursor: pointer;
+}
+.imgsize{
+  width: 100%;
+  height: 100%;
+}

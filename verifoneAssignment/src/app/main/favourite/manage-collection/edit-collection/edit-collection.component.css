@@ -1,0 +1,10 @@
+.editCollection {
+  margin: 4% !important ;
+}
+h2 {
+  text-align: center;
+}
+
+.close {
+  cursor: pointer;
+}

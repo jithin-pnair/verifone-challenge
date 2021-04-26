@@ -1,0 +1,16 @@
+
+<div  class="card container" *ngFor="let item of imageDetailsList">
+  
+  <img [src]="item.urls.small" class="imgsize" alt="" />
+  <div class="overlay" *ngIf="idHomeScreen">
+    <p class="column" (click)="redirectToAuthor(item)">
+      By : {{ item.user.name }}
+    </p>
+    <img
+      class="favourite-icon"
+      src="/assets/star.png"
+      (click)="addtoFavourite(item)" alt=""
+    />
+  </div>
+  
+</div>

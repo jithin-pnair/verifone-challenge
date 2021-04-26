@@ -1,0 +1,210 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.circular_profile {
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .1);
+    height: 166px;
+    width: 166px;
+}
+
+.profile_pic_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 25px;
+}
+
+.username {
+    margin: auto;
+}
+
+.for_editprofile_btn {
+    margin-top: 30px;
+}
+
+.div_for_details {
+    display: flex;
+    flex-direction: column;
+    column-gap: 15px;
+}
+
+.edit_btn {
+    color: #767676;
+    fill: currentColor;
+    background-color: #fff;
+    border-color: #d1d1d1;
+    height: 30px;
+    padding: 0 11px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.edit_btn:hover {
+    border-color: black;
+}
+
+.nav_for_photos_likes {
+    width: 96%;
+    border-bottom: 2px solid;
+    border-color: #d1d1d1;
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    margin-left: 2%;
+}
+
+.div_for_photos {
+    color: #767676;
+    font-size: 18px;
+    height: 39px;
+    cursor: pointer;
+}
+
+.btnDefault {
+    background-color: red;
+}
+
+img.show_images {
+    height: 300px;
+    float: left;
+}
+
+.historyOfUser {
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+    column-gap: 129px;
+    justify-content: center;
+}
+
+.likes {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10%;
+    height: 100px;
+    width: 150px;
+}
+
+span.num {
+    text-align: center;
+    font-size: 35px;
+}
+
+span.name {
+    text-align: center;
+    color: #767676;
+    font-size: 20px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.userlocation {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    color: #767676;
+    column-gap: 10px;
+}
+
+img.twiterIcon {
+    width: 16px;
+    margin-right: 6px;
+}
+
+img.photo_icon_in_nav {
+    width: 16%;
+}
+
+.show_images {
+    float: left;
+    margin: 1%;
+}
+
+.for_arrow {
+    height: 0px;
+}
+
+.somstyles {
+    background-color: black;
+}
+
+.linkActive {
+    color: #767676;
+    font-size: 18px;
+    height: 39px;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+
+.forCollectionsPriviewimages {
+    display: flex;
+    flex-direction: row;
+    width: 37%;
+    border-radius: 6px;
+    height: 370px;
+    float: left;
+    margin: 1%;
+    column-gap: 2px;
+}
+
+.forSmall[_ngcontent-eps-c128] {
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    row-gap: 2px;
+}
+
+img.forBig {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+img.forSmall_up {
+    height: 98%;
+    width: 100%;
+    margin-bottom: 2px !important;
+    border-top-right-radius: 6px;
+}
+
+img.forSmall_Down {
+    height: 100%;
+    width: 100%;
+    border-bottom-right-radius: 6px;
+}
+
+.forBigpic {
+    width: 62%;
+}
+
+.smallUp {
+    height: 50%;
+    width: 167px;
+}
+
+.smallDown {
+    height: 50%;
+    width: 167px;
+}
+
+.collectionsSelector {
+    display: flex;
+    flex-direction: row;
+}
+
+.for_arrow {
+    cursor: pointer;
+}
+
+.div_to_showImagesComp {
+    margin-left: 1%;
+}

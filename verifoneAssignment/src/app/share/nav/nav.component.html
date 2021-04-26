@@ -1,0 +1,29 @@
+<div fxLayout="row">
+  
+  <div fxFlex="95" fxFlexOffset="50">
+    <form [formGroup]="inputForm">
+      <mat-form-field floatLabel="never" fxFill>
+        <button matSuffix type="submit" (click)="searchImage()">
+          <img src="../../assets/search.png" width="20px" alt=""/>
+        </button>
+
+        <input autofocus type="text" matInput placeholder="{{ searchKeyValue }}" formControlName="searchKey" />
+      </mat-form-field>
+    </form>
+  </div>
+  <div fxFlex="3" class="homeDiv" (click)="goToHome()">
+    <span mat-button>
+      <img src="../../assets/homes.png" class="homeImg" alt="" />
+    </span>
+  </div>
+  <div fxFlex="2" fxLayoutAlign="end center">
+    <span mat-button [matMenuTriggerFor]="menu">
+      <img src="../../assets/users.png" alt=""/>
+    </span>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="redirectToFavorite()">
+        {{ myFavoritesDropdownValue }}
+      </button>
+    </mat-menu>
+  </div>
+</div>

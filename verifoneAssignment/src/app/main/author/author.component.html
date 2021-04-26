@@ -1,0 +1,70 @@
+<app-nav (emitSearchKey)="searchImages($event)"></app-nav>
+<div class="container" *ngIf="userDetails">
+  <div class="profile_pic_name">
+    <div>
+      <img [src]="authorDetails.user.profile_image.large" class="circular_profile" alt="profile" />
+    </div>
+  </div>
+  <div class="details">
+    <div class="username">
+      <h1>{{ userDetails.name }}</h1>
+    </div>
+    <div class="userlocation">
+      <img src="../../../assets/authorImages/place-black-18dp.svg" alt="" />
+      <span>{{ userDetails.location }},</span>
+      <div *ngIf="userDetails.twitter_username">
+        <img class="twiterIcon" src="../../../assets/authorImages/twitter.png"
+          alt="" /><span>{{ userDetails.twitter_username }}</span>
+      </div>
+      <div *ngIf="userDetails.instagram_username">
+        <img class="twiterIcon" src="../../../assets/authorImages/instagram-new.png"
+          alt="" /><span>{{ userDetails.instagram_username }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="div_for_details">
+    <div class="historyOfUser">
+      <div class="likes">
+        <span class="num">{{ userDetails.followers_count }}</span>
+        <span class="name">{{ initResourceVale.follwersLabel }}</span>
+      </div>
+      <div class="likes">
+        <span class="num">{{ userDetails.following_count }}</span>
+        <span class="name">{{ initResourceVale.followingCountLabel }}</span>
+      </div>
+      <div class="likes">
+        <span class="num">{{ userDetails.total_collections }}</span>
+        <span class="name">{{ initResourceVale.collectionsLabel }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav_for_photos_likes">
+    <div [ngClass]="[divPhotosStyle]" (click)="onclickOnPhotos()">
+      <img class="photo_icon_in_nav" src="../../../assets/authorImages/image.png" alt="" />
+      {{ initResourceVale.navPhotos }}
+    </div>
+    <div [ngClass]="[divLikesStyle]" (click)="onclickOnLikes()">
+      <img class="photo_icon_in_nav" src="../../../assets/authorImages//filled-like.png" alt="" />
+      {{ initResourceVale.navLikes }}
+    </div>
+    <div [ngClass]="[divCollectionsStyle]" (click)="onclickOnCollections()">
+      <img class="photo_icon_in_nav" src="../../../assets/authorImages/collections-24px.svg"
+        alt="" />{{ initResourceVale.navCollections }}
+    </div>
+  </div>
+  <div>
+    <div class="div_to_showImagesComp" *ngIf="showPhotos">
+      <app-show-image [imageDetails]="photos" [idHomeScreen]="false"></app-show-image>
+    </div>
+    <div class="div_to_showImagesComp" *ngIf="showLikes">
+      <app-show-image [imageDetails]="likes" [idHomeScreen]="false"></app-show-image>
+    </div>
+
+    <div  *ngIf="displayCollectioions">
+      <div *ngFor="let collections of collectionsListArray">
+        <app-collections [fromSearchImage]="isSearchImage" [collectionsList]="collections"></app-collections>
+      </div>
+    </div>
+  </div>
+</div>

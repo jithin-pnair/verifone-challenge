@@ -1,0 +1,5 @@
+<router-outlet></router-outlet>
+<div class="spinner" *ngIf="isSpinnerVisible">
+  <mat-spinner color="accent" mode="indeterminate" *ngIf="spinnerService.visibility | async">
+  </mat-spinner>
+</div>
